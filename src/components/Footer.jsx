@@ -16,9 +16,6 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className="mt-6 font-mono text-[11px] text-muted opacity-70">
-        Built with React · Framer Motion · Lenis · Tailwind. Ready for GitHub Pages.
-      </div>
     </footer>
   );
 };

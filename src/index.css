@@ -140,3 +140,68 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--border);
 }
+/* ===== Photo treatment: duotone + glow + fade ===== */
+
+.photo-frame {
+  isolation: isolate;
+}
+
+.hero-portrait {
+  filter: grayscale(100%) contrast(1.05) brightness(0.95);
+  transition: filter 0.6s ease;
+}
+
+.hero-portrait::after {
+  content: "";
+}
+
+/* tint overlay duotone pakai warna accent */
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--accent) 35%, transparent) 0%,
+    transparent 55%
+  );
+  mix-blend-mode: color;
+  opacity: 0.9;
+  transition: opacity 0.6s ease;
+}
+
+.photo-frame:hover .hero-portrait {
+  filter: grayscale(20%) contrast(1.02) brightness(1);
+}
+
+.photo-frame:hover::before {
+  opacity: 0.35;
+}
+
+/* glow lembut di belakang foto, mengikuti warna accent */
+.photo-glow {
+  position: absolute;
+  inset: 8% -10% -6% -10%;
+  background: radial-gradient(
+    ellipse 60% 55% at 50% 60%,
+    color-mix(in srgb, var(--accent) 22%, transparent) 0%,
+    transparent 70%
+  );
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* fade halus di bagian bawah foto biar transisi ke background section mulus */
+.photo-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 22%;
+  z-index: 20;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--bg) 92%);
+}

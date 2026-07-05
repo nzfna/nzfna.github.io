@@ -17,6 +17,7 @@ const HeroSection = () => {
       className="relative min-h-screen pt-32 md:pt-36 pb-12 px-6 md:px-12 overflow-hidden"
       data-testid="hero-section"
     >
+      {/* top meta row */}
       <div className="flex items-start justify-between font-mono text-xs uppercase tracking-[0.25em] text-muted mb-10 md:mb-14">
         <div>
           <div>[ Portfolio / 2026 ]</div>
@@ -29,78 +30,68 @@ const HeroSection = () => {
       </div>
 
       <motion.div variants={container} initial="hidden" animate="show" className="relative">
+        {/* Nama besar */}
         <div className="relative">
-          <motion.h1
-            variants={item}
-            className="font-display font-black uppercase tracking-tighter leading-[0.85] text-[22vw] md:text-[16vw] lg:text-[13vw]"
-          >
-            NAZIFA
-          </motion.h1>
-
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-4 mt-2 md:mt-0">
+          {/* Baris NAZIFA + stats block sejajar */}
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-4">
             <motion.h1
               variants={item}
               className="font-display font-black uppercase tracking-tighter leading-[0.85] text-[22vw] md:text-[16vw] lg:text-[13vw]"
             >
+              NAZIFA
               IZZATI<span className="text-accent">.</span>
             </motion.h1>
 
+            {/* Stats block: Currently / GPA / Stack — sejajar NAZIFA */}
             <motion.div
               variants={item}
-              className="md:pb-5 lg:pb-8 md:max-w-xs font-mono text-xs md:text-sm uppercase tracking-[0.2em] text-muted"
+              className="md:pb-5 lg:pb-8 md:max-w-sm flex flex-col gap-4"
             >
-              <div className="flex items-start gap-2">
-                <ArrowDownRight size={16} className="text-accent shrink-0 mt-0.5" />
-                <p>
-                  Full-Stack Developer & Mahasiswa Teknologi Informasi — Universitas Brawijaya. Building modern web experiences where clean architecture meets sharp UI.
-                </p>
+              <div className="border-t border-app pt-3">
+                <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">Currently</div>
+                <div className="font-display text-lg md:text-xl mt-1">Semester 2 · TI FV UB</div>
+              </div>
+              <div className="border-t border-app pt-3">
+                <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">GPA</div>
+                <div className="font-display text-lg md:text-xl mt-1">
+                  3.90<span className="text-accent">/</span>4.00
+                </div>
+              </div>
+              <div className="border-t border-app pt-3">
+                <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">Stack</div>
+                <div className="font-mono text-xs md:text-sm mt-1">
+                  Spring Boot · Angular 17 · Laravel 11 · MySQL · Azure AI
+                </div>
+              </div>
+              <div className="border-t border-app pt-3">
+                <a
+                  href="#contact"
+                  className="group inline-flex items-center gap-2 font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-accent mt-4 md:mt-6"
+                >
+                  <span>Contact Me</span>
+                  <ArrowDownRight className="w-3 h-3 md:w-4 md:h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-all" />
+                </a>
               </div>
             </motion.div>
           </div>
         </div>
-
-        <div className="grid grid-cols-12 gap-6 mt-12 md:mt-16 items-end">
-          <motion.div variants={item} className="col-span-12 md:col-span-4 order-2 md:order-1">
-            <div className="flex flex-col gap-6">
-              <div className="border-t border-app pt-4">
-                <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">Currently</div>
-                <div className="font-display text-2xl md:text-3xl mt-2">Semester 2 · TI Vokasi UB</div>
-              </div>
-              <div className="border-t border-app pt-4">
-                <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">GPA</div>
-                <div className="font-display text-2xl md:text-3xl mt-2">
-                  3.90<span className="text-accent">/</span>4.00
-                </div>
-              </div>
-              <div className="border-t border-app pt-4">
-                <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">Stack</div>
-                <div className="font-mono text-sm mt-2">
-                  Spring Boot · Angular 17 · Laravel 11 · MySQL · Azure AI
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div variants={item} className="col-span-12 md:col-span-5 order-1 md:order-2 relative">
-            <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
-              <div className="absolute inset-0 flex items-center justify-center overflow-hidden bg-transparent">
-                <img 
-                  src="/photo.png"
-                  alt="Nazifa Izzati portrait"
-                  className="hero-portrait w-full h-full object-cover"
-                  data-testid="hero-portrait"
-                  onError={(e) => { e.target.style.display = "none"; }}
-                />
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div variants={item} className="col-span-12 md:col-span-3 order-3 flex flex-col items-start md:items-end gap-3">
-            <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">Scroll</div>
-            <div className="font-display text-6xl md:text-7xl leading-none">01</div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">to explore</div>
-          </motion.div>
-        </div>
+        <motion.div
+          variants={item}
+          className="mt-8 md:mt-12 flex justify-center md:justify-start"
+        >
+          <a
+            href="/resume.pdf"
+            download
+            className="px-4 py-2 bg-accent text-background font-mono text-xs md:text-sm uppercase tracking-[0.3em] hover:bg-accent-hover transition-colors"
+          >
+            DOWNLOAD RESUME
+          </a>
+        </motion.div>
+        <motion.div
+          variants={item}
+          className="mt-4 md:mt-6 flex justify-center md:justify-start"
+        >
+        </motion.div>
       </motion.div>
     </section>
   );

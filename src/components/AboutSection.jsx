@@ -23,7 +23,7 @@ const AboutSection = () => {
           className="col-span-12 md:col-span-7"
         >
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-            Mahasiswa TI Vokasi <span className="text-accent">Universitas Brawijaya</span> — membangun aplikasi web full-stack end-to-end secara mandiri.
+            Mahasiswa FV TI <span className="text-accent">Universitas Brawijaya</span> — membangun aplikasi web full-stack end-to-end secara mandiri.
           </h2>
 
           <p className="mt-8 md:mt-10 text-base md:text-lg leading-relaxed text-muted max-w-2xl">

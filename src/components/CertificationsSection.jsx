@@ -16,6 +16,13 @@ const certs = [
     verify: "dicoding.com/certificates/KEXL2W850ZG2",
     href: "https://dicoding.com/certificates/KEXL2W850ZG2",
   },
+  {
+    title: "Belajar Dasar AI",
+    provider: "Pijak x IBM SkillsBuild X Dicoding",
+    date: "July 2026",
+    verify: "dicoding.com/certificates/JLX1V8OJJZ72",
+    href: "https://dicoding.com/certificates/JLX1V8OJJZ72",
+  },
 ];
 
 const languages = [
