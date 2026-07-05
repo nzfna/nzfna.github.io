@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/nzfna/static/css/main.37f9f584.css",
-    "main.js": "/nzfna/static/js/main.b0faf2d6.js",
-    "index.html": "/nzfna/index.html",
-    "main.37f9f584.css.map": "/nzfna/static/css/main.37f9f584.css.map",
-    "main.b0faf2d6.js.map": "/nzfna/static/js/main.b0faf2d6.js.map"
+    "main.css": "/static/css/main.37f9f584.css",
+    "main.js": "/static/js/main.b0faf2d6.js",
+    "index.html": "/index.html",
+    "main.37f9f584.css.map": "/static/css/main.37f9f584.css.map",
+    "main.b0faf2d6.js.map": "/static/js/main.b0faf2d6.js.map"
   },
   "entrypoints": [
     "static/css/main.37f9f584.css",
