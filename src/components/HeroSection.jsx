@@ -49,7 +49,7 @@ const HeroSection = () => {
             >
               <div className="border-t border-app pt-3">
                 <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">Currently</div>
-                <div className="font-display text-lg md:text-xl mt-1">Semester 2 · TI FV UB</div>
+                <div className="font-display text-lg md:text-xl mt-1">Semester 3 · TI FV UB</div>
               </div>
               <div className="border-t border-app pt-3">
                 <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted">GPA</div>
